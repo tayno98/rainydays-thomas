@@ -5,15 +5,19 @@
 @import url("./_variables.css");
 /* Feel free to add as many of these imports as you need */
 
-body {
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
+
+html {
+   scroll-behavior: smooth;
 }
 
-.centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+body {
+  background-color: grey;
+}
+
+
+nav {
+  position: fixed;
+  top: 0px;
+  height: 40px;
+  width: 100%;
 }
