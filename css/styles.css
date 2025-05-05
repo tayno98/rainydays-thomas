@@ -1,9 +1,10 @@
 /* Use import to split up your CSS into manageable chunks */
 @import url("./_reset.css");
-
+@import url("rainydays-thomas./css/_reset.css");
 /* Files that are only needed to be imported are called partials */
 /* These are marked with an underscore: */
 @import url("./_variables.css");
+@import url("rainydays-thomas./css/_variables.css");
 /* Feel free to add as many of these imports as you need */
 
 
