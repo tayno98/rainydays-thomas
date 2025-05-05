@@ -8,6 +8,124 @@
 
 
 
+/* background for index */
+.home {
+  width: 100%;
+
+}
+
+
+/* 1920x1080 Desktop Size */
+
+
+/* Navigation Bar Container */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+
+/* Logo */
+.logo {
+  position: absolute; /* Keep logo absolutely positioned */
+  left: 30px; /* Position from left */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logo img {
+  height: 50px;
+  display: block;
+}
+
+/* Navigation Main Center Alignment */
+.nav-center {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0 auto; /* Center the ul */
+  padding: 0;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+}
+
+nav a:hover {
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+/* Search Container */
+.search-container {
+  position: absolute; 
+  right: 70px; /* Position from right */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 4px;
+  
+  height: 40px;
+}
+
+.search-container input[type="text"] {
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.search-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+/* checkout icon */
+
+.checkout-icon {
+  font-size: 30px;
+  color: white;
+  position: absolute; 
+  right: 30px; /* Position from right */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+
+}
+
+
+
+
+
+/*  End Of Navigation Bar Menu */
+
 
 
 html {
@@ -21,88 +139,65 @@ body {
 }
 
 h1 {
-  font-size: 20px;
-  color: blue;
-}
-
-
-
-.sectionone {
   font-family: 'Montserrat';
+  font-size: 3rem;
   color: white;
-  font-weight: bold;
-  max-width: 50ch;
-  margin: 0% 5%;
+  font-weight:bolder;
+  text-decoration: underline;
 }
 
 
 
-img {
-  width: 100%;
 
+
+/* About us */
+
+
+
+.about-section {
+  background: url('../images/hiking-blur.png') no-repeat center center;
+   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px; 
+  text-align: center;
+  color: white; 
 }
 
-.highlighted {
-  border: 2px dashed red;
+
+
+
+#one {
+  
+  background-color: red;
+  padding: 5px;
+  font-family: 'Montserrat';
+  font-size: 1rem;
+}
+
+
+
+.infoproduct-section {
+  background: url('../images/Trees.jpg') no-repeat center center;
+  backdrop-filter: blur(10px);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px; 
+  text-align: center;
+  color: white;
 }
 
 #two {
-  background-color: red;
+  background-color: lightblue;
   padding: 5px;
-  
-}
-
-#three {
-  background-color: yellow;
-}
-
-#four {
-  background-color: aquamarine;
-}
-
-
-
-
-
-/*  Navigation Bar Menu */
-nav {
-  position: fixed;
-  top: 0px;
-  height: 40px;
-  width: 100%;
-  margin-right: auto;
- 
-
-}
-
-nav li {
-  display: inline-block;
-  
-}
-
-nav ul {
-  padding: 20px;
-  border: solid black;
-  background-color: black;
-  opacity: 70%;
-
-}
-
-nav a {
-  color: white;
   font-family: 'Montserrat';
-  text-decoration: none;
-  padding: 20px;
+  font-size: 1rem;
 }
 
-
-nav a:hover {
-  
-  color: whitesmoke;
-  font-family: 'Montserrat';
-  font-weight: bold;
-  
-}
-/*  End Of Navigation Bar Menu */
-
+/* End Of 1920x1080 Desktop Size */
 
