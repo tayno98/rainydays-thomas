@@ -7,8 +7,7 @@
 /* Feel free to add as many of these imports as you need */
 
 /* Github Load */
-@import url("/rainydays-thomas/css/reset.css");
-@import url("/rainydays-thomas/css/variables.css");
+
 
 
 
@@ -37,7 +36,7 @@ nav {
 
 /* Logo */
 .logo {
-  position: absolute; /* Keep logo absolutely positioned */
+  position: absolute; 
   left: 30px; /* Position from left */
   top: 50%;
   transform: translateY(-50%);
@@ -113,20 +112,26 @@ nav a:hover {
 /* checkout icon */
 
 .checkout-icon {
-  font-size: 30px;
+  font-size: 1.5em;
   color: white;
   position: absolute; 
-  right: 30px; /* Position from right */
+  right: 15px; /* Position from right */
   top: 50%;
   transform: translateY(-50%);
   display: flex;
   align-items: center;
+  
 
 }
 
+.checkout-icon a {
+  font-size: 22px; /* Makes <a> inherit from .checkout-icon */
+  
+}
 
-
-
+.checkout-icon i:hover {
+  transform: scale(1.2);
+}
 
 /*  End Of Navigation Bar Menu */
 
@@ -148,6 +153,9 @@ h1 {
   color: white;
   font-weight:bolder;
   text-decoration: underline;
+  margin-block: 0.67em;
+ 
+  
 }
 
 
@@ -159,7 +167,7 @@ h1 {
 
 
 .about-section {
-  background: url('../images/hiking-blur.png') no-repeat center center;
+  background: url('../images/hiking-blur.jpeg') no-repeat center center;
    background-size: cover;
   display: flex;
   flex-direction: column;
@@ -184,7 +192,7 @@ h1 {
 
 
 .infoproduct-section {
-  background: url('../images/Trees.jpg') no-repeat center center;
+  background: url('../images/trees.jpeg') no-repeat center center;
   backdrop-filter: blur(10px);
   background-size: cover;
   display: flex;
