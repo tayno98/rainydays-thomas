@@ -1,0 +1,355 @@
+/* Use import to split up your CSS into manageable chunks */
+@import url("./_reset.css");
+
+/* Files that are only needed to be imported are called partials */
+/* These are marked with an underscore: */
+@import url("./_variables.css");
+/* Feel free to add as many of these imports as you need */
+
+/* Github Load */
+
+/* background for index */
+.home {
+    width: 100%;
+  
+  }
+  
+  /* 1920x1080 Desktop Size */
+  
+  .logo {
+    position: absolute; 
+    left: 30px; /* Position from left */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .logo img {
+    height: 50px;
+    display: block;
+  }
+  
+  
+  .footer {
+  
+    background-color: black;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    text-align: center;
+    padding: 15px;
+   
+  }
+/* Navigation BEGINNING  */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 20px;
+  }
+  
+  /* Hamburger Mobile*/
+  .hamburger {
+    display: block;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  
+  /* Nav center  */
+  .nav-center {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    flex-direction: column;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+  }
+  
+  /* Showing tha menu when active with tha script */
+  .nav-center.active {
+    display: flex;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  nav li {
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav a {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  nav a:hover {
+    color: whitesmoke;
+    font-weight: bold;
+    
+  }
+  
+  
+  @media only screen and (min-width: 812px) {
+    nav {
+      height: 80px;
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      padding: 0;
+    }
+    
+    .hamburger {
+      display: none;
+    }
+    
+    .nav-center {
+      position: static;
+      display: flex;
+      flex-direction: row;
+      width: auto;
+      padding: 0;
+      background-color: transparent;
+    }
+    
+    nav ul {
+      flex-direction: row;
+      gap: 30px;
+      width: auto;
+    }
+    
+    nav a {
+      padding: 10px 15px;
+      width: auto;
+    }
+  }
+  
+  
+  /* Search Container */
+  .search-container {
+    position: absolute; 
+    right: 70px; 
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 4px;
+    
+    height: 40px;
+  }
+  
+  .search-container input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 15px;
+  }
+  
+  .search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  
+  /* checkout icon */
+  
+  .checkout-icon {
+    font-size: 1.5em;
+    color: white;
+    position: absolute; 
+    right: 15px; /* Position from right */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    
+  
+  }
+  
+  .checkout-icon a {
+    font-size: 22px; 
+    
+  }
+  
+  .checkout-icon i:hover {
+    transform: scale(1.2);
+  }
+  
+  /*  End Of Navigation Bar Menu */
+  
+  
+  
+  html {
+     scroll-behavior: smooth;
+  }
+  
+  body {
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  h1 {
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    color: white;
+    font-weight: bolder;
+    
+    margin-block: 0.67em;
+   
+    
+  }
+  
+  
+.our-products {
+    background: url('../images/hiking-blur.jpeg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1.5rem;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    
+  }
+  
+  .our-products h1 {
+    font-size: 2.2rem;
+    margin: 1.5rem 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 100px;
+  }
+  
+  .tagline {
+    font-style: italic;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+  
+  .content-container {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .text-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 1.8rem;
+    color: #333;
+    text-align: left;
+    line-height: 1.6;
+    margin: 0 auto; /* Center the box */
+  }
+  
+  .text-box p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .text-box p:last-child {
+    margin-bottom: 0;
+  }
+  
+  
+  .text-box ul {
+    padding-left: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .text-box li {
+    margin-bottom: 0.5rem;
+  }
+  
+  
+  @media only screen and (min-width: 600px) {
+    .about-section {
+      padding: 2rem;
+    }
+    
+    .text-box {
+      padding: 2rem;
+      max-width: 80%;
+    }
+  }
+  
+  
+  @media only screen and (min-width: 813px) {
+    .about-section {
+      justify-content: center;
+      padding: 3rem;
+    }
+    
+    .about-section h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .tagline {
+      font-size: 1.3rem;
+      margin-bottom: 3rem;
+    }
+    
+    .text-box {
+      max-width: 60%; /*  for desktop */
+      padding: 2.5rem;
+    }
+    
+    .text-box p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+  }
+  
+  /* End Of About us Section*/
+  
+  /* Mobile Responsive Logo etc */
+
+
+@media only screen and (max-width: 812px) {
+    .logo {
+      display: flex;
+      align-items: center;
+      left: 160px;
+      top: 50%;
+    
+    }
+    
+    .logo img {
+      height: 40px;
+    }
+  
+    .search-container {
+      display: none; /* Hiding the Search on mobile */
+    }
+    
+  }
