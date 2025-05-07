@@ -17,24 +17,8 @@
 
 }
 
-
 /* 1920x1080 Desktop Size */
 
-
-/* Navigation Bar Container */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80px;
-}
-
-/* Logo */
 .logo {
   position: absolute; 
   left: 30px; /* Position from left */
@@ -47,24 +31,75 @@ nav {
   display: block;
 }
 
-/* Navigation Main Center Alignment */
-.nav-center {
-  display: flex;
-  justify-content: center;
+
+.footer {
+
+  background-color: black;
+  color:white;
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  text-align: center;
+  padding: 15px;
+ 
+}
+
+
+/* Navigation BEGINNING  */
+
+nav {
+  position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 20px;
+}
+
+/* Hamburger Mobile*/
+.hamburger {
+  display: block;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Nav center  */
+.nav-center {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  flex-direction: column;
+  padding: 20px 0;
+  transition: all 0.3s ease;
+}
+
+/* Showing tha menu when active with tha script */
+.nav-center.active {
+  display: flex;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 30px;
-  margin: 0 auto; /* Center the ul */
+  flex-direction: column;
+  gap: 15px;
+  margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 nav li {
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 
 nav a {
@@ -72,18 +107,56 @@ nav a {
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   font-size: 16px;
-  padding: 10px 15px;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
 }
 
 nav a:hover {
   color: whitesmoke;
   font-weight: bold;
+  
 }
+
+
+@media only screen and (min-width: 812px) {
+  nav {
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .hamburger {
+    display: none;
+  }
+  
+  .nav-center {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    padding: 0;
+    background-color: transparent;
+  }
+  
+  nav ul {
+    flex-direction: row;
+    gap: 30px;
+    width: auto;
+  }
+  
+  nav a {
+    padding: 10px 15px;
+    width: auto;
+  }
+}
+
 
 /* Search Container */
 .search-container {
   position: absolute; 
-  right: 70px; /* Position from right */
+  right: 70px; 
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -125,7 +198,7 @@ nav a:hover {
 }
 
 .checkout-icon a {
-  font-size: 22px; /* Makes <a> inherit from .checkout-icon */
+  font-size: 22px; 
   
 }
 
@@ -149,10 +222,10 @@ body {
 
 h1 {
   font-family: 'Montserrat';
-  font-size: 3rem;
+  font-size: 2rem;
   color: white;
-  font-weight:bolder;
-  text-decoration: underline;
+  font-weight: bolder;
+  
   margin-block: 0.67em;
  
   
@@ -162,54 +235,160 @@ h1 {
 
 
 
-/* About us */
-
-
+/* About us Section*/
 
 .about-section {
   background: url('../images/hiking-blur.jpeg') no-repeat center center;
-   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 400px; 
-  text-align: center;
-  color: white; 
-}
-
-
-
-
-#one {
-  
-  background-color: red;
-  padding: 5px;
-  font-family: 'Montserrat';
-  font-size: 1rem;
-}
-
-
-
-.infoproduct-section {
-  background: url('../images/trees.jpeg') no-repeat center center;
-  backdrop-filter: blur(10px);
   background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 400px; 
-  text-align: center;
+  min-height: 100vh;
+  padding: 1.5rem;
   color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
 }
 
+.about-section h1 {
+  font-size: 2.2rem;
+  margin: 1.5rem 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  font-style: italic;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 100%;
+}
+
+.text-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 1.8rem;
+  color: #333;
+  text-align: left;
+  line-height: 1.6;
+  margin: 0 auto; /* Center the box */
+}
+
+.text-box p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.text-box p:last-child {
+  margin-bottom: 0;
+}
+
+
+.text-box ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.text-box li {
+  margin-bottom: 0.5rem;
+}
+
+
+@media only screen and (min-width: 600px) {
+  .about-section {
+    padding: 2rem;
+  }
+  
+  .text-box {
+    padding: 2rem;
+    max-width: 80%;
+  }
+}
+
+
+@media only screen and (min-width: 813px) {
+  .about-section {
+    justify-content: center;
+    padding: 3rem;
+  }
+  
+  .about-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tagline {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .text-box {
+    max-width: 60%; /*  for desktop */
+    padding: 2.5rem;
+  }
+  
+  .text-box p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+}
+
+/* End Of About us Section*/
+
+
+/* Product Info Section*/
+.infoproduct-section {
+  background: url('../images/trees.jpeg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 30rem;
+  text-align: center;
+  color: white;
+  font-family: 'Montserrat';
+}
+
+
+
+
 #two {
-  background-color: lightblue;
-  padding: 5px;
+  
+  
   font-family: 'Montserrat';
   font-size: 1rem;
 }
 
+/* End of Product Info Section*/
+
 /* End Of 1920x1080 Desktop Size */
+
+/* Mobile Responsive Logo etc */
+
+
+@media only screen and (max-width: 812px) {
+  .logo {
+    display: flex;
+    align-items: center;
+    left: 160px;
+    top: 50%;
+  
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+
+  .search-container {
+    display: none; /* Hiding the Search on mobile */
+  }
+  
+}
+
+
 
