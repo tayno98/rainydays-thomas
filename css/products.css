@@ -1,6 +1,6 @@
-@import "imports/variables.css";
 @import "imports/reset.css";
-/* Github Load */
+@import "imports/reset.css";
+
 
 /* background for index */
 .home {
